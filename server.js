@@ -15,7 +15,7 @@ function outputNaturalDate(date) {
 
 app.set('port', (process.env.PORT || 5000))
 
-app.use('/:time', function (req, res) {
+app.get('/:time', function (req, res) {
 	time = req.params.time
 
 	if ((/^\d+/g).test(time)) {
