@@ -29,9 +29,6 @@ app.use('/:time', function (req, res) {
 		output.unix = null
 		output.natural = null
 	}
-		
-		
-	// }
 		res.end(JSON.stringify(output))
 })
 
