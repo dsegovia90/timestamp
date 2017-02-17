@@ -13,7 +13,7 @@ function outputNaturalDate(date) {
 	return months[date.getMonth()] + " " + (date.getDate() + 1) + ", " + date.getFullYear()
 }
 
-app.set('port', (process.env.PORT || 5000))
+var PORT = process.env.PORT || 3000;
 
 app.get('/:time', function (req, res) {
 	time = req.params.time
@@ -34,6 +34,6 @@ app.get('/:time', function (req, res) {
 		res.end(JSON.stringify(output))
 })
 
-app.listen('port', function() {
+app.listen(PORT, function() {
   console.log('Node app is running on port', app.get('port'));
 });
